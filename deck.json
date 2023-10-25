@@ -1,0 +1,51 @@
+{
+    "defaultPrintSize_width": 800,
+    "defaultPrintSize_height": 600,
+    "title": "Example Deck",
+    "edition": 1,
+    "defaultBackside": {
+        "text": "Default Backside"
+    },
+    "cards": [
+        {
+            "name": "Card 1",
+            "frontside": {
+                "text": "Frontside 1"
+            },
+            "backside": {
+                "text": "Backside 1"
+            },
+            "customPrintSize_width": 100,
+            "customPrintSize_height": 150,
+            "cardType": "custom",
+            "id": "CLAPsyBF3KzEAEeQW8FZBH"
+        },
+        {
+            "name": "Card 2",
+            "frontside": {
+                "text": "Frontside 2"
+            },
+            "backside": {
+                "text": "Backside 2"
+            },
+            "customPrintSize_width": 200,
+            "customPrintSize_height": 250,
+            "cardType": "custom",
+            "id": "nGu9cY8gTCcVXULWU5auKd"
+        },
+        {
+            "name": "Card 3",
+            "frontside": {
+                "text": "Frontside 3"
+            },
+            "backside": {
+                "text": "Backside 3"
+            },
+            "customPrintSize_width": 300,
+            "customPrintSize_height": 350,
+            "cardType": "custom",
+            "id": "HkqYegShXT6cFrFxHjpL6D"
+        }
+    ],
+    "id": "Xssqwfas4A4yCLiG5P4rdr"
+}

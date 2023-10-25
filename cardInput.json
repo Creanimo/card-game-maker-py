@@ -1,0 +1,14 @@
+{
+    "gamedeck": "Geheime Mission",
+    "edition": 1,
+    "cards": [
+        {
+            "text": "Tausche mit einer Person den Platz, ohne dass sie Verdacht schöpft.",
+            "type": "default"
+        },
+        {
+            "text": "Bringe die Person rechts von dir dazu besonders laut zu lachen.",
+            "type": "default"
+        }
+    ]
+}
