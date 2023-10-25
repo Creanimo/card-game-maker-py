@@ -15,10 +15,10 @@ class Deck:
     id: str = field(default_factory=objectTools.generateID)
 
     def exportFromJson(self, filename: str = "deck.json"):
-        deck_data = asdict(self)
+        deck_data: dict[str, object] = asdict(self)
 
         with open(filename, "w") as file:
-        json.dump(deck_data, file)
+            json.dump(deck_data, file)
 
 def importFromJson(filename: str):
         with open(filename, "r") as file:
