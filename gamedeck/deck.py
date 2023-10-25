@@ -1,5 +1,5 @@
 from __future__ import annotations
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 from gamedeck import card, side
 from tools import objectTools
 import json
@@ -13,6 +13,12 @@ class Deck:
     defaultBackside: side.Side
     cards: list[card.Card]
     id: str = field(default_factory=objectTools.generateID)
+
+    def exportFromJson(self, filename: str = "deck.json"):
+        deck_data = asdict(self)
+
+        with open(filename, "w") as file:
+        json.dump(deck_data, file)
 
 def importFromJson(filename: str):
         with open(filename, "r") as file:
