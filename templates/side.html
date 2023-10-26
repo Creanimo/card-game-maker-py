@@ -1,6 +1,7 @@
-<div class="side" {% if side.image !=None %}style="background-image: url({{ side.image }});"{% endif %}>
-    <div class="side__scale" style="width: {{ deck.defaultPrintSize_width }}mm; height: {{ deck.defaultPrintSize_height }}mm">
-        {% if side.logoimage !=None %}<img src="{{ side.logoimage }}">{% endif %}
-        {% if side.text !=None %}{{ side.text }}{% endif %}
+<div class="side" style="width: {{ deck.defaultPrintSize_width }}mm; height: {{ deck.defaultPrintSize_height }}mm{% if side.image !=None %} background-image: url({{ side.image }});{% endif %}">
+    <div class="side__header">{% if side.header !=None %}{{ side.header }}{% endif %}</div>
+    <div class="side__content">
+        {% if side.logoimage !=None %}<img class="side__logoimage" src="{{ side.logoimage }}">{% endif %}{% if side.text !=None %}<div class="side__text">{{ side.text }}</div>{% endif %}
     </div>
+    <div class="side__footer">{% if side.footer !=None %}{{ side.footer }}{% endif %}</div>
 </div>

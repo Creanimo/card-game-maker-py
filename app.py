@@ -5,17 +5,27 @@ if __name__ == "__main__":
 
     defaultBackside = side.Side(logoimage="logo.png")
 
-    # Creating an example deck object with 3 cards
-    card1 = card.Card("Card 1", side.Side("Frontside 1"), defaultBackside)
-    card2 = card.Card("Card 2", side.Side("Frontside 2"), defaultBackside)
-    card3 = card.Card("Card 3", side.Side("Frontside 3"), defaultBackside)
+    cards: list[card.Card] = [
+        card.Card(side.Side("Bringe eine Person dazu mit dir den Platz zu tauschen, ohne dass sie Verdacht schöpft."), defaultBackside),
+        card.Card(side.Side("Mache der gleichen Person 3 Komplimente."), defaultBackside),
+        card.Card(side.Side("Verabrede dich mit jemandem zum Tanzen, Bowling, Klettern oder Wandern."), defaultBackside),
+        card.Card(side.Side("Rede über eine Berühmtheit aus deiner Kinder-/Jugendzeit."), defaultBackside),
+        card.Card(side.Side('Kratz dich an der Nase, wenn jemand das Wort "lecker" sagt.'), defaultBackside)
+    ]
 
-    wholeDeck = deck.Deck(148, 105, "Example Deck", 1, [card1, card2, card3])
+    cardNumber = 1
+    for singleCard in cards:
+        singleCard.frontside.header = "Geheime Mission"
+        singleCard.frontside.footer = f"{cardNumber}"
+        cardNumber += 1
+
+
+    wholeDeck = deck.Deck(148, 104, "Example Deck", 1, cards)
 
     renderThis = game_render.RenderGameElement(wholeDeck.template, wholeDeck)
     renderThis.html()
 
-    with open("export/card-deck.html", "w") as file:
+    with open("export/card-deck.html", "w", encoding='utf-8') as file:
         file.write(renderThis.output)
 
     # print(wholeDeck)

@@ -6,9 +6,9 @@ from gamedeck import side
 
 @dataclass
 class Card:
-    name: str
     frontside: side.Side
     backside: Union[side.Side, None] = None
+    name: str | None = None
     customPrintSize_width: Union[int, None] = None
     customPrintSize_height: Union[int, None] = None
     cardType: str = "default"
