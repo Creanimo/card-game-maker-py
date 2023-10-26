@@ -1,0 +1,9 @@
+<div class="card">
+    {{ card.name }}
+    {% with side = card.frontside %}
+        {% include "side.html" %}
+    {% endwith %}
+    {% with side = card.backside %}
+        {% include "side.html" %}
+    {% endwith %}
+</div>

@@ -12,6 +12,7 @@ class Deck:
     edition: int
     defaultBackside: side.Side
     cards: list[card.Card]
+    template: str = "deck.html"
     id: str = field(default_factory=objectTools.generateID)
 
     def exportFromJson(self, filename: str = "deck.json"):

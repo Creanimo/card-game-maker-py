@@ -1,10 +1,7 @@
-import json
-from dataclasses import asdict
 from gamedeck import deck, card, side
+from htmlrender import game_render
 
 if __name__ == "__main__":
-    
-
 
     # Creating an example deck object with 3 cards
     card1 = card.Card("Card 1", side.Side("Frontside 1"), side.Side("Backside 1"), 100, 150, "custom")
@@ -13,10 +10,14 @@ if __name__ == "__main__":
 
     wholeDeck = deck.Deck(800, 600, "Example Deck", 1, side.Side("Default Backside"), [card1, card2, card3])
 
+    renderThis = game_render.RenderGameElement(wholeDeck.template, wholeDeck)
+    renderThis.html()
+    print(str(renderThis.output))
+
     # print(wholeDeck)
 
-    print(deck.importFromJson("deck.json").__dict__)
-    print(wholeDeck.__dict__)
+    # print(deck.importFromJson("deck.json").__dict__)
+    # print(wholeDeck.__dict__)
 
 
     '''
