@@ -1,3 +1,6 @@
-<div class="side">
-    {{ side.text }}
+<div class="side" {% if side.image !=None %}style="background-image: url({{ side.image }});"{% endif %}>
+    <div class="side__scale" style="width: {{ deck.defaultPrintSize_width }}mm; height: {{ deck.defaultPrintSize_height }}mm">
+        {% if side.logoimage !=None %}<img src="{{ side.logoimage }}">{% endif %}
+        {% if side.text !=None %}{{ side.text }}{% endif %}
+    </div>
 </div>

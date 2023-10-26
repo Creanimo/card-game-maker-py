@@ -10,7 +10,6 @@ class Deck:
     defaultPrintSize_height: int
     title: str
     edition: int
-    defaultBackside: side.Side
     cards: list[card.Card]
     template: str = "deck.html"
     id: str = field(default_factory=objectTools.generateID)

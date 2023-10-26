@@ -3,16 +3,20 @@ from htmlrender import game_render
 
 if __name__ == "__main__":
 
-    # Creating an example deck object with 3 cards
-    card1 = card.Card("Card 1", side.Side("Frontside 1"), side.Side("Backside 1"), 100, 150, "custom")
-    card2 = card.Card("Card 2", side.Side("Frontside 2"), side.Side("Backside 2"), 200, 250, "custom")
-    card3 = card.Card("Card 3", side.Side("Frontside 3"), side.Side("Backside 3"), 300, 350, "custom")
+    defaultBackside = side.Side(logoimage="logo.png")
 
-    wholeDeck = deck.Deck(800, 600, "Example Deck", 1, side.Side("Default Backside"), [card1, card2, card3])
+    # Creating an example deck object with 3 cards
+    card1 = card.Card("Card 1", side.Side("Frontside 1"), defaultBackside)
+    card2 = card.Card("Card 2", side.Side("Frontside 2"), defaultBackside)
+    card3 = card.Card("Card 3", side.Side("Frontside 3"), defaultBackside)
+
+    wholeDeck = deck.Deck(148, 105, "Example Deck", 1, [card1, card2, card3])
 
     renderThis = game_render.RenderGameElement(wholeDeck.template, wholeDeck)
     renderThis.html()
-    print(str(renderThis.output))
+
+    with open("export/card-deck.html", "w") as file:
+        file.write(renderThis.output)
 
     # print(wholeDeck)
 

@@ -1,0 +1,26 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+@media screen {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.side {
+  border: 1px solid black;
+}
+
+@page {
+  size: A5;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
