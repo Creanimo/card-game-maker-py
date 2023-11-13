@@ -10,7 +10,7 @@ if __name__ == "__main__":
         card.Card(side.Side("Mache der gleichen Person 3 Komplimente."), defaultBackside),
         card.Card(side.Side("Verabrede dich mit jemandem zum Tanzen, Bowling, Klettern oder Wandern."), defaultBackside),
         card.Card(side.Side("Rede über eine Berühmtheit aus deiner Kinder-/Jugendzeit."), defaultBackside),
-        card.Card(side.Side('Kratz dich an der Nase, wenn jemand das Wort "lecker" sagt.'), defaultBackside)
+        card.Card(side.Side('Kratz dir an der Nase, wenn jemand den Geschmack des Essens lobt.'), defaultBackside)
     ]
 
     cardNumber = 1
@@ -20,7 +20,7 @@ if __name__ == "__main__":
         cardNumber += 1
 
 
-    wholeDeck = deck.Deck(148, 104, "Example Deck", 1, cards)
+    wholeDeck = deck.Deck(111, 80, "Example Deck", 1, cards)
 
     renderThis = game_render.RenderGameElement(wholeDeck.template, wholeDeck)
     renderThis.html()
